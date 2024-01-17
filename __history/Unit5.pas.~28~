@@ -1,0 +1,116 @@
+unit Unit5;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.ComCtrls, Vcl.Buttons;
+
+type
+  TForm5 = class(TForm)
+    PageControl1: TPageControl;
+    TabSheet2: TTabSheet;
+    GroupBox1: TGroupBox;
+    GridPanel1: TGridPanel;
+    Label1: TLabel;
+    RadioButton2: TRadioButton;
+    RadioButton1: TRadioButton;
+    ComboBox1: TComboBox;
+    SpeedButton1: TSpeedButton;
+    GridPanel17: TGridPanel;
+    SpeedButton4: TSpeedButton;
+    SpeedButton6: TSpeedButton;
+    SpeedButton7: TSpeedButton;
+    GroupBox2: TGroupBox;
+    GridPanel32: TGridPanel;
+    Label32: TLabel;
+    ComboBox5: TComboBox;
+    SpeedButton47: TSpeedButton;
+    procedure RadioButton2Click(Sender: TObject);
+    procedure RadioButton1Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
+    procedure SpeedButton6Click(Sender: TObject);
+    procedure SpeedButton7Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form5: TForm5;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1, Unit2, Unit3, Unit4;
+
+procedure TForm5.RadioButton1Click(Sender: TObject);
+begin
+  if RadioButton1.Checked = true then
+  begin
+    ComboBox1.Enabled := False;
+    ComboBox1.Items.Clear;
+  end;
+end;
+
+procedure TForm5.RadioButton2Click(Sender: TObject);
+var
+  i: integer;
+begin
+  if RadioButton2.Checked = true then
+  begin
+    DM.Q_gbalo.Close;
+    DM.Q_gbalo.SQL.Clear;
+    DM.Q_gbalo.SQL.Text := 'select distinct (Nom) from historique_sim ';
+    DM.Q_gbalo.Open;
+    while not DM.Q_gbalo.Eof do
+
+    begin
+      ComboBox1.Items.Add(DM.Q_gbalo.FieldByName('Nom').AsString);
+      DM.Q_gbalo.Next;
+    end;
+    ComboBox1.Enabled := true;
+  end;
+end;
+
+procedure TForm5.SpeedButton4Click(Sender: TObject);
+begin
+  if RadioButton1.Checked = true then
+  begin
+    DM.Q_liste_electeur_unique_region_Commerce.Close;
+    DM.Q_liste_electeur_unique_region_Commerce.Open;
+    DM.frxDBDataset_electeur_region_unique.DataSet :=
+      DM.Q_liste_electeur_unique_region_Commerce;
+    DM.frxreport_electeur_region_unique.ShowReport(true);
+  end;
+end;
+
+procedure TForm5.SpeedButton6Click(Sender: TObject);
+begin
+  if RadioButton1.Checked = true then
+  begin
+    DM.Q_liste_electeur_unique_region_Industrie.Close;
+    DM.Q_liste_electeur_unique_region_Industrie.Open;
+    DM.frxDBDataset_electeur_region_unique.DataSet :=
+      DM.Q_liste_electeur_unique_region_Industrie;
+    DM.frxreport_electeur_region_unique.ShowReport(true);
+  end;
+end;
+
+procedure TForm5.SpeedButton7Click(Sender: TObject);
+begin
+  if RadioButton1.Checked = true then
+  begin
+    DM.Q_liste_electeur_unique_region_Service.Close;
+    DM.Q_liste_electeur_unique_region_Service.Open;
+    DM.frxDBDataset_electeur_region_unique.DataSet :=
+      DM.Q_liste_electeur_unique_region_Service;
+    DM.frxreport_electeur_region_unique.ShowReport(true);
+  end;
+end;
+
+end.

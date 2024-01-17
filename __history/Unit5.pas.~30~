@@ -1,0 +1,140 @@
+unit Unit5;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.ComCtrls, Vcl.Buttons, Vcl.WinXCtrls;
+
+type
+  TForm5 = class(TForm)
+    PageControl1: TPageControl;
+    TabSheet2: TTabSheet;
+    GroupBox1: TGroupBox;
+    GridPanel1: TGridPanel;
+    Label1: TLabel;
+    RadioButton2: TRadioButton;
+    RadioButton1: TRadioButton;
+    ComboBox1: TComboBox;
+    SpeedButton1: TSpeedButton;
+    GridPanel17: TGridPanel;
+    SpeedButton4: TSpeedButton;
+    SpeedButton6: TSpeedButton;
+    SpeedButton7: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    GroupBox2: TGroupBox;
+    GroupBox3: TGroupBox;
+    GridPanel32: TGridPanel;
+    Label32: TLabel;
+    ComboBox5: TComboBox;
+    SpeedButton47: TSpeedButton;
+    GridPanel2: TGridPanel;
+    SearchBox1: TSearchBox;
+    GroupBox4: TGroupBox;
+    GridPanel3: TGridPanel;
+    SpeedButton5: TSpeedButton;
+    SpeedButton3: TSpeedButton;
+    ComboBox2: TComboBox;
+    procedure RadioButton2Click(Sender: TObject);
+    procedure RadioButton1Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
+    procedure SpeedButton6Click(Sender: TObject);
+    procedure SpeedButton7Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form5: TForm5;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1, Unit2, Unit3, Unit4;
+
+procedure TForm5.FormShow(Sender: TObject);
+begin
+  Dm.Q_gbalo.Close;
+  Dm.Q_gbalo.SQL.Clear;
+  Dm.Q_gbalo.SQL.Text :=
+    'select distinct Region from electeur where region is not null or region <> '' '' or region <> ''Null'' or region <>''NULL'' ';
+  Dm.Q_gbalo.Open;
+  while not Dm.Q_gbalo.Eof do
+  begin
+    ComboBox2.Items.Add(Dm.Q_gbalo.FieldByName('Region').AsString);
+    Dm.Q_gbalo.Next;
+  end;
+end;
+
+procedure TForm5.RadioButton1Click(Sender: TObject);
+begin
+  if RadioButton1.Checked = true then
+  begin
+    ComboBox1.Enabled := False;
+    ComboBox1.Items.Clear;
+  end;
+end;
+
+procedure TForm5.RadioButton2Click(Sender: TObject);
+var
+  i: integer;
+begin
+  if RadioButton2.Checked = true then
+  begin
+    Dm.Q_gbalo.Close;
+    Dm.Q_gbalo.SQL.Clear;
+    Dm.Q_gbalo.SQL.Text := 'select distinct (Nom) from historique_sim ';
+    Dm.Q_gbalo.Open;
+    while not Dm.Q_gbalo.Eof do
+
+    begin
+      ComboBox1.Items.Add(Dm.Q_gbalo.FieldByName('Nom').AsString);
+      Dm.Q_gbalo.Next;
+    end;
+    ComboBox1.Enabled := true;
+  end;
+end;
+
+procedure TForm5.SpeedButton4Click(Sender: TObject);
+begin
+  if RadioButton1.Checked = true then
+  begin
+    Dm.Q_liste_electeur_unique_region_Commerce.Close;
+    Dm.Q_liste_electeur_unique_region_Commerce.Open;
+    Dm.frxDBDataset_electeur_region_unique.DataSet :=
+      Dm.Q_liste_electeur_unique_region_Commerce;
+    Dm.frxreport_electeur_region_unique.ShowReport(true);
+  end;
+end;
+
+procedure TForm5.SpeedButton6Click(Sender: TObject);
+begin
+  if RadioButton1.Checked = true then
+  begin
+    Dm.Q_liste_electeur_unique_region_Industrie.Close;
+    Dm.Q_liste_electeur_unique_region_Industrie.Open;
+    Dm.frxDBDataset_electeur_region_unique.DataSet :=
+      Dm.Q_liste_electeur_unique_region_Industrie;
+    Dm.frxreport_electeur_region_unique.ShowReport(true);
+  end;
+end;
+
+procedure TForm5.SpeedButton7Click(Sender: TObject);
+begin
+  if RadioButton1.Checked = true then
+  begin
+    Dm.Q_liste_electeur_unique_region_Service.Close;
+    Dm.Q_liste_electeur_unique_region_Service.Open;
+    Dm.frxDBDataset_electeur_region_unique.DataSet :=
+      Dm.Q_liste_electeur_unique_region_Service;
+    Dm.frxreport_electeur_region_unique.ShowReport(true);
+  end;
+end;
+
+end.

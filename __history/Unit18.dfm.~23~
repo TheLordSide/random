@@ -1,0 +1,307 @@
+object Form18: TForm18
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMaximize]
+  BorderStyle = bsSingle
+  Caption = 'Modifier les Dossiers'
+  ClientHeight = 814
+  ClientWidth = 1331
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Roboto'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 19
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1331
+    Height = 814
+    Align = alClient
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitLeft = -8
+    ExplicitTop = 8
+    DesignSize = (
+      1331
+      814)
+    object Panel2: TPanel
+      Left = 1
+      Top = 1
+      Width = 1329
+      Height = 120
+      Align = alTop
+      TabOrder = 0
+      ExplicitLeft = 2
+      object Label1: TLabel
+        Left = 56
+        Top = 23
+        Width = 188
+        Height = 23
+        Caption = 'LISTE DES DOSSIERS'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clHotLight
+        Font.Height = -19
+        Font.Name = 'Roboto'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 416
+        Top = 75
+        Width = 4
+        Height = 19
+      end
+      object SearchBox1: TSearchBox
+        Left = 56
+        Top = 72
+        Width = 321
+        Height = 27
+        TabOrder = 0
+        TextHint = 'Raison Sociale ou Nom ou Referent'
+        OnChange = SearchBox1Change
+      end
+    end
+    object DBGrid1: TDBGrid
+      AlignWithMargins = True
+      Left = 4
+      Top = 124
+      Width = 750
+      Height = 686
+      Align = alLeft
+      Color = clGradientActiveCaption
+      DataSource = DataSource1
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -16
+      TitleFont.Name = 'Roboto'
+      TitleFont.Style = []
+      OnCellClick = DBGrid1CellClick
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'RaisonSocial'
+          Title.Caption = 'Raison sociale'
+          Width = 250
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NomEtPrenomElecteur'
+          Title.Caption = 'Nom et prenom'
+          Width = 250
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Representant1'
+          Title.Caption = 'Referent'
+          Width = 250
+          Visible = True
+        end>
+    end
+    object Panel4: TPanel
+      Left = 776
+      Top = 488
+      Width = 553
+      Height = 322
+      TabOrder = 2
+      object ListBox1: TListBox
+        Left = 0
+        Top = 16
+        Width = 220
+        Height = 249
+        ItemHeight = 19
+        Items.Strings = (
+          'Carte CFE'
+          'Carte CCIT'
+          'Photo'
+          'Piece Identite'
+          'Quitus Fiscale')
+        TabOrder = 0
+      end
+    end
+    object Panel3: TPanel
+      Left = 776
+      Top = 127
+      Width = 554
+      Height = 338
+      Anchors = [akLeft, akTop, akRight]
+      TabOrder = 3
+      DesignSize = (
+        554
+        338)
+      object Label2: TLabel
+        Left = 328
+        Top = 0
+        Width = 134
+        Height = 23
+        Caption = 'Pieces fournies'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clHotLight
+        Font.Height = -19
+        Font.Name = 'Roboto'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label3: TLabel
+        Left = 0
+        Top = 0
+        Width = 169
+        Height = 23
+        Caption = 'Pieces manquantes'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clHotLight
+        Font.Height = -19
+        Font.Name = 'Roboto'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object ListBox2: TListBox
+        Left = 328
+        Top = 29
+        Width = 220
+        Height = 297
+        Anchors = [akTop, akRight]
+        ItemHeight = 19
+        TabOrder = 0
+      end
+      object Button1: TButton
+        Left = 236
+        Top = 157
+        Width = 75
+        Height = 25
+        Cursor = crHandPoint
+        Caption = 'generer'
+        TabOrder = 1
+        OnClick = Button1Click
+      end
+      object ListBox3: TListBox
+        Left = 1
+        Top = 29
+        Width = 220
+        Height = 297
+        Anchors = [akTop, akRight]
+        ItemHeight = 19
+        TabOrder = 2
+      end
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = DM.UniQuery4
+    Left = 744
+    Top = 65528
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 849
+    Top = 287
+    object Misejour1: TMenuItem
+      Caption = 'Mise '#224' jour'
+      object Categorie1: TMenuItem
+        Caption = 'Categorie'
+        object Commerce1: TMenuItem
+          Caption = 'Commerce'
+        end
+        object Industrie1: TMenuItem
+          Caption = 'Industrie'
+        end
+        object Service1: TMenuItem
+          Caption = 'Service'
+        end
+      end
+      object Secteur1: TMenuItem
+        Caption = 'Secteur'
+        object ComA1: TMenuItem
+          Caption = 'Com A'
+        end
+        object ComB1: TMenuItem
+          Caption = 'Com B'
+        end
+        object ComC1: TMenuItem
+          Caption = 'Com C'
+        end
+        object ComD1: TMenuItem
+          Caption = 'Com D'
+        end
+        object SerA1: TMenuItem
+          Caption = 'Ser A'
+        end
+        object SerB1: TMenuItem
+          Caption = 'Ser B1'
+        end
+        object SerB21: TMenuItem
+          Caption = 'Ser B2'
+        end
+        object SerB31: TMenuItem
+          Caption = 'Ser B3'
+        end
+        object SerB41: TMenuItem
+          Caption = 'Ser B4'
+        end
+        object SerB51: TMenuItem
+          Caption = 'Ser B5'
+        end
+        object SerB61: TMenuItem
+          Caption = 'Ser B6'
+        end
+        object SerC1: TMenuItem
+          Caption = 'Ser C'
+        end
+        object SerD1G11: TMenuItem
+          Caption = 'Ser D1G1'
+        end
+        object SerD1G21: TMenuItem
+          Caption = 'Ser D1G2'
+        end
+        object SerD1G31: TMenuItem
+          Caption = 'Ser D1G3'
+        end
+        object SerD1G41: TMenuItem
+          Caption = 'Ser D1G4'
+        end
+        object SerD1G51: TMenuItem
+          Caption = 'Ser D1G5'
+        end
+        object SerD21: TMenuItem
+          Caption = 'Ser D2'
+        end
+        object IndA1: TMenuItem
+          Caption = 'Ind A'
+        end
+        object IndB1: TMenuItem
+          Caption = 'Ind B'
+        end
+        object IndC1: TMenuItem
+          Caption = 'Ind C'
+        end
+        object IndD1: TMenuItem
+          Caption = 'Ind D'
+        end
+        object IndE1: TMenuItem
+          Caption = 'Ind E'
+        end
+      end
+    end
+  end
+  object DataSource2: TDataSource
+    DataSet = UniQuery1
+    Left = 1121
+    Top = 25
+  end
+  object UniQuery1: TUniQuery
+    Connection = DM.UniConnection1
+    Left = 1009
+    Top = 41
+  end
+  object PopupMenu2: TPopupMenu
+    Left = 912
+    Top = 247
+  end
+end

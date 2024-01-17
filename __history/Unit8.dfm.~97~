@@ -1,0 +1,768 @@
+object Form8: TForm8
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  Caption = 'RECHERCHE SUR DOSSIER LOME COMMUNE'
+  ClientHeight = 734
+  ClientWidth = 1008
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Roboto'
+  Font.Style = [fsBold]
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 19
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 1008
+    Height = 734
+    ActivePage = TabSheet1
+    Align = alClient
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'LISTE GENERALE DES ELECTEURS'
+      object SpeedButton2: TSpeedButton
+        AlignWithMargins = True
+        Left = 745
+        Top = 65
+        Width = 128
+        Height = 29
+        Caption = 'PDF/EXCEL'
+        OnClick = SpeedButton2Click
+      end
+      object SpeedButton4: TSpeedButton
+        AlignWithMargins = True
+        Left = 745
+        Top = 192
+        Width = 128
+        Height = 29
+        Caption = 'PDF/EXCEL'
+        OnClick = SpeedButton2Click
+      end
+      object SpeedButton5: TSpeedButton
+        AlignWithMargins = True
+        Left = 745
+        Top = 320
+        Width = 128
+        Height = 29
+        Caption = 'PDF/EXCEL'
+        OnClick = SpeedButton2Click
+      end
+      object Panel_dossier: TPanel
+        Left = 0
+        Top = 0
+        Width = 1000
+        Height = 40
+        Align = alTop
+        BevelInner = bvRaised
+        BevelOuter = bvNone
+        TabOrder = 0
+        object Label13: TLabel
+          Left = 35
+          Top = 7
+          Width = 245
+          Height = 23
+          Caption = 'RECHERCHE PAR REFERENT'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Roboto'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      object ComboBox1: TComboBox
+        Left = 155
+        Top = 65
+        Width = 518
+        Height = 27
+        TabOrder = 1
+        OnChange = ComboBox1Change
+      end
+      object Panel1: TPanel
+        Left = 0
+        Top = 120
+        Width = 1000
+        Height = 40
+        BevelInner = bvRaised
+        BevelOuter = bvNone
+        TabOrder = 2
+        object Label14: TLabel
+          Left = 35
+          Top = 7
+          Width = 293
+          Height = 23
+          Caption = 'RECHERCHE PAR NOM ELECTEUR'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Roboto'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      object Edit1: TEdit
+        Left = 155
+        Top = 192
+        Width = 518
+        Height = 27
+        TabOrder = 3
+        OnChange = Edit1Change
+      end
+      object Panel2: TPanel
+        Left = 0
+        Top = 248
+        Width = 1000
+        Height = 40
+        BevelInner = bvRaised
+        BevelOuter = bvNone
+        TabOrder = 4
+        object Label15: TLabel
+          Left = 35
+          Top = 7
+          Width = 303
+          Height = 23
+          Caption = 'RECHERCHE PAR RAISON SOCIALE'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Roboto'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      object Edit2: TEdit
+        Left = 155
+        Top = 320
+        Width = 518
+        Height = 27
+        TabOrder = 5
+        OnChange = Edit2Change
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'LISTE DES ELECTEURS '
+      ImageIndex = 1
+      object GridPanel30: TGridPanel
+        Left = 0
+        Top = 92
+        Width = 1000
+        Height = 84
+        Align = alTop
+        BevelOuter = bvNone
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = SpeedButton43
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = SpeedButton44
+            Row = 0
+          end
+          item
+            Column = 0
+            Control = SpeedButton45
+            Row = 1
+          end>
+        RowCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        TabOrder = 0
+        object SpeedButton43: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 500
+          Height = 42
+          Cursor = crHandPoint
+          Align = alClient
+          Caption = 'Obtenir la liste des Electeurs en Commerce'
+          OnClick = SpeedButton43Click
+          ExplicitLeft = -6
+          ExplicitTop = -6
+        end
+        object SpeedButton44: TSpeedButton
+          Left = 500
+          Top = 0
+          Width = 500
+          Height = 42
+          Cursor = crHandPoint
+          Align = alClient
+          Caption = 'Obtenir la liste des electeurs en Industrie'
+          OnClick = SpeedButton44Click
+          ExplicitLeft = 136
+          ExplicitTop = 8
+          ExplicitWidth = 23
+          ExplicitHeight = 22
+        end
+        object SpeedButton45: TSpeedButton
+          Left = 0
+          Top = 42
+          Width = 500
+          Height = 42
+          Cursor = crHandPoint
+          Align = alClient
+          Caption = 'Obtenir la liste des Electeurs en Service'
+          OnClick = SpeedButton45Click
+          ExplicitLeft = 136
+          ExplicitTop = 8
+          ExplicitWidth = 23
+          ExplicitHeight = 22
+        end
+      end
+      object GridPanel33: TGridPanel
+        Left = 0
+        Top = 176
+        Width = 1000
+        Height = 46
+        Align = alTop
+        BevelOuter = bvNone
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = SpeedButton48
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = SpeedButton49
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        TabOrder = 1
+        object SpeedButton48: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 500
+          Height = 46
+          Cursor = crHandPoint
+          Align = alClient
+          Caption = 'Obtenir la liste des Electeurs en Commerce-Industrie'
+          OnClick = SpeedButton48Click
+          ExplicitLeft = 136
+          ExplicitTop = 8
+          ExplicitWidth = 23
+          ExplicitHeight = 22
+        end
+        object SpeedButton49: TSpeedButton
+          Left = 500
+          Top = 0
+          Width = 500
+          Height = 46
+          Cursor = crHandPoint
+          Align = alClient
+          Caption = 'Obtenir la liste des electeurs en Commerce-service'
+          OnClick = SpeedButton49Click
+          ExplicitLeft = 136
+          ExplicitTop = 8
+          ExplicitWidth = 23
+          ExplicitHeight = 22
+        end
+      end
+      object GridPanel34: TGridPanel
+        Left = 0
+        Top = 222
+        Width = 1000
+        Height = 46
+        Align = alTop
+        BevelOuter = bvNone
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = SpeedButton50
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = SpeedButton51
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end
+          item
+            SizeStyle = ssAuto
+          end>
+        TabOrder = 2
+        object SpeedButton50: TSpeedButton
+          Left = 0
+          Top = 0
+          Width = 500
+          Height = 46
+          Cursor = crHandPoint
+          Align = alClient
+          Caption = 'Obtenir la liste des Electeurs en Service-Industire'
+          OnClick = SpeedButton50Click
+          ExplicitLeft = 136
+          ExplicitTop = 8
+          ExplicitWidth = 23
+          ExplicitHeight = 22
+        end
+        object SpeedButton51: TSpeedButton
+          Left = 500
+          Top = 0
+          Width = 500
+          Height = 46
+          Cursor = crHandPoint
+          Align = alClient
+          Caption = 'Obtenir la liste des Electeurs en Commerce-Industrie-Service'
+          OnClick = SpeedButton51Click
+          ExplicitLeft = 448
+          ExplicitTop = 32
+          ExplicitWidth = 23
+          ExplicitHeight = 22
+        end
+      end
+      object Panel3: TPanel
+        Left = 0
+        Top = 0
+        Width = 1000
+        Height = 65
+        Align = alTop
+        BevelInner = bvRaised
+        BevelOuter = bvNone
+        TabOrder = 3
+        object Label16: TLabel
+          Left = 35
+          Top = 7
+          Width = 245
+          Height = 23
+          Caption = 'RECHERCHE PAR REFERENT'
+          Font.Charset = ANSI_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Roboto'
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+      end
+      object ComboBox2: TComboBox
+        Left = 0
+        Top = 65
+        Width = 1000
+        Height = 27
+        Align = alTop
+        TabOrder = 4
+        OnChange = ComboBox1Change
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'DASHBORD'
+      ImageIndex = 2
+      object GridPanel7: TGridPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 285
+        Width = 994
+        Height = 41
+        Align = alTop
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = Label1
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = Label2
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        TabOrder = 0
+        DesignSize = (
+          994
+          41)
+        object Label1: TLabel
+          Left = 116
+          Top = 11
+          Width = 265
+          Height = 19
+          Anchors = []
+          Caption = 'Nombre d'#39'electeurs Industrie-Service'
+          ExplicitLeft = 106
+          ExplicitTop = 10
+        end
+        object Label2: TLabel
+          Left = 740
+          Top = 11
+          Width = 9
+          Height = 19
+          Anchors = []
+          Caption = '0'
+          ExplicitTop = 10
+        end
+      end
+      object GridPanel1: TGridPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 238
+        Width = 994
+        Height = 41
+        Align = alTop
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = Label3
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = Label4
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        TabOrder = 1
+        DesignSize = (
+          994
+          41)
+        object Label3: TLabel
+          Left = 99
+          Top = 11
+          Width = 299
+          Height = 19
+          Anchors = []
+          Caption = 'Nombre d'#39'electeurs en Commerce-Service'
+          ExplicitLeft = 88
+          ExplicitTop = 10
+        end
+        object Label4: TLabel
+          Left = 740
+          Top = 11
+          Width = 9
+          Height = 19
+          Anchors = []
+          Caption = '0'
+          ExplicitTop = 10
+        end
+      end
+      object GridPanel2: TGridPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 191
+        Width = 994
+        Height = 41
+        Align = alTop
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = Label5
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = Label6
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        TabOrder = 2
+        DesignSize = (
+          994
+          41)
+        object Label5: TLabel
+          Left = 93
+          Top = 11
+          Width = 311
+          Height = 19
+          Anchors = []
+          Caption = 'Nombre d'#39'electeurs en Commerce-Industrie'
+          ExplicitLeft = 82
+          ExplicitTop = 10
+        end
+        object Label6: TLabel
+          Left = 740
+          Top = 11
+          Width = 9
+          Height = 19
+          Anchors = []
+          Caption = '0'
+          ExplicitTop = 10
+        end
+      end
+      object GridPanel3: TGridPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 144
+        Width = 994
+        Height = 41
+        Align = alTop
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = Label7
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = Label8
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        TabOrder = 3
+        DesignSize = (
+          994
+          41)
+        object Label7: TLabel
+          Left = 115
+          Top = 11
+          Width = 267
+          Height = 19
+          Anchors = []
+          Caption = 'Nombre d'#39'electeurs unique en Service'
+          ExplicitLeft = 103
+          ExplicitTop = 10
+        end
+        object Label8: TLabel
+          Left = 740
+          Top = 11
+          Width = 9
+          Height = 19
+          Anchors = []
+          Caption = '0'
+          ExplicitTop = 10
+        end
+      end
+      object GridPanel4: TGridPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 97
+        Width = 994
+        Height = 41
+        Align = alTop
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = Label9
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = Label10
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        TabOrder = 4
+        DesignSize = (
+          994
+          41)
+        object Label9: TLabel
+          Left = 109
+          Top = 11
+          Width = 279
+          Height = 19
+          Anchors = []
+          Caption = 'Nombre d'#39'electeurs unique en Industrie'
+          ExplicitLeft = 97
+          ExplicitTop = 10
+        end
+        object Label10: TLabel
+          Left = 740
+          Top = 11
+          Width = 9
+          Height = 19
+          Anchors = []
+          Caption = '0'
+          ExplicitTop = 10
+        end
+      end
+      object GridPanel5: TGridPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 50
+        Width = 994
+        Height = 41
+        Align = alTop
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = Label11
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = Label12
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        TabOrder = 5
+        DesignSize = (
+          994
+          41)
+        object Label11: TLabel
+          Left = 103
+          Top = 11
+          Width = 292
+          Height = 19
+          Anchors = []
+          Caption = 'Nombre d'#39'electeurs unique en Commerce'
+          ExplicitLeft = 90
+          ExplicitTop = 10
+        end
+        object Label12: TLabel
+          Left = 740
+          Top = 11
+          Width = 9
+          Height = 19
+          Anchors = []
+          Caption = '0'
+          ExplicitTop = 10
+        end
+      end
+      object GridPanel8: TGridPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 3
+        Width = 994
+        Height = 41
+        Align = alTop
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = SpeedButton1
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = SpeedButton3
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        TabOrder = 6
+        object SpeedButton1: TSpeedButton
+          AlignWithMargins = True
+          Left = 4
+          Top = 4
+          Width = 490
+          Height = 33
+          Align = alClient
+          Caption = 'Obtenir Stats '
+          OnClick = SpeedButton1Click
+          ExplicitTop = 8
+          ExplicitWidth = 503
+        end
+        object SpeedButton3: TSpeedButton
+          AlignWithMargins = True
+          Left = 500
+          Top = 4
+          Width = 490
+          Height = 33
+          Align = alClient
+          Caption = 'PDF/EXCEL'
+          ExplicitLeft = 200
+          ExplicitTop = 24
+          ExplicitWidth = 23
+          ExplicitHeight = 22
+        end
+      end
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = DM.Q_liste_generale
+    Left = 772
+    Top = 304
+  end
+end

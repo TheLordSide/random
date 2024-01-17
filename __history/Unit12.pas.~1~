@@ -1,0 +1,32 @@
+unit Unit12;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
+
+type
+  TForm12 = class(TForm)
+    GridPanel1: TGridPanel;
+    Label1: TLabel;
+    ComboBox1: TComboBox;
+    GridPanel2: TGridPanel;
+    Label2: TLabel;
+    GridPanel3: TGridPanel;
+    SpeedButton2: TSpeedButton;
+    Edit1: TEdit;
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form12: TForm12;
+
+implementation
+
+{$R *.dfm}
+
+end.

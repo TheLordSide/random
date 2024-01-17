@@ -1,0 +1,161 @@
+unit Unit16;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, AdvUtil, Vcl.Grids,
+  AdvObj, BaseGrid, AdvGrid, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons, W7Classes,
+  W7Buttons, AeroButtons;
+
+type
+  TForm16 = class(TForm)
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    TabSheet3: TTabSheet;
+    GridPanel1: TGridPanel;
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Panel3: TPanel;
+    Panel4: TPanel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
+    GridPanel2: TGridPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    GridPanel3: TGridPanel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    GridPanel4: TGridPanel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    GridPanel5: TGridPanel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Panel5: TPanel;
+    Label21: TLabel;
+    GridPanel6: TGridPanel;
+    Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    W7SpeedButton2: TW7SpeedButton;
+    W7SpeedButton3: TW7SpeedButton;
+    W7SpeedButton4: TW7SpeedButton;
+    W7SpeedButton5: TW7SpeedButton;
+    W7SpeedButton1: TW7SpeedButton;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure W7SpeedButton1Click(Sender: TObject);
+    procedure W7SpeedButton2Click(Sender: TObject);
+    procedure W7SpeedButton3Click(Sender: TObject);
+    procedure W7SpeedButton4Click(Sender: TObject);
+    procedure W7SpeedButton5Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form16: TForm16;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1, Unit10, Unit11, Unit12, Unit13, Unit14, Unit15, Unit2, Unit3, Unit4,
+  Unit5, Unit6, Unit7, Unit8, Unit9, Unit17;
+
+procedure TForm16.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Form3.Show;
+end;
+
+procedure TForm16.W7SpeedButton1Click(Sender: TObject);
+begin
+  DM.UniQuery2.Close;
+  DM.UniQuery2.SQL.Clear;
+  DM.UniQuery2.SQL.Text :=
+    'SELECT *, GROUP_CONCAT(DISTINCT import_cat.Categorie SEPARATOR '','') as list_secteur'
+    + ' from importations,import_cat,import_jointure WHERE import_cat.NomEtPrenomElecteur=importations.NomEtPrenomElecteur'
+    + ' AND import_cat.NomEtPrenomElecteur=import_jointure.NomEtPrenomElecteur3 '
+    + 'GROUP by importations.Raison_Social HAVING (list_secteur like''%Com A%'')'
+    + ' and (list_secteur <>''Com A'')' +
+    ' order by importations.NomEtPrenomElecteur ';
+  DM.UniQuery2.Open;
+  Form17.ShowModal;
+end;
+
+procedure TForm16.W7SpeedButton2Click(Sender: TObject);
+begin
+  DM.UniQuery2.Close;
+  DM.UniQuery2.SQL.Clear;
+  DM.UniQuery2.SQL.Text :=
+    'SELECT *, GROUP_CONCAT(DISTINCT import_cat.Categorie SEPARATOR '','') as list_secteur'
+    + ' from importations,import_cat,import_jointure WHERE import_cat.NomEtPrenomElecteur=importations.NomEtPrenomElecteur'
+    + ' AND import_cat.NomEtPrenomElecteur=import_jointure.NomEtPrenomElecteur3 '
+    + 'GROUP by importations.Raison_Social HAVING (list_secteur like''%Com B%'')'
+    + ' and (list_secteur <>''Com B'')' +
+    ' order by importations.NomEtPrenomElecteur ';
+  DM.UniQuery2.Open;
+  Form17.ShowModal;
+end;
+
+procedure TForm16.W7SpeedButton3Click(Sender: TObject);
+begin
+  DM.UniQuery2.Close;
+  DM.UniQuery2.SQL.Clear;
+  DM.UniQuery2.SQL.Text :=
+    'SELECT *, GROUP_CONCAT(DISTINCT import_cat.Categorie SEPARATOR '','') as list_secteur'
+    + ' from importations,import_cat,import_jointure WHERE import_cat.NomEtPrenomElecteur=importations.NomEtPrenomElecteur'
+    + ' AND import_cat.NomEtPrenomElecteur=import_jointure.NomEtPrenomElecteur3 '
+    + 'GROUP by importations.Raison_Social HAVING (list_secteur like''%Com C%'')'
+    + ' and (list_secteur <>''Com C'')' +
+    ' order by importations.NomEtPrenomElecteur ';
+  DM.UniQuery2.Open;
+  Form17.ShowModal;
+end;
+
+procedure TForm16.W7SpeedButton4Click(Sender: TObject);
+begin
+  DM.UniQuery2.Close;
+  DM.UniQuery2.SQL.Clear;
+  DM.UniQuery2.SQL.Text :=
+    'SELECT *, GROUP_CONCAT(DISTINCT import_cat.Categorie SEPARATOR '','') as list_secteur'
+    + ' from importations,import_cat,import_jointure WHERE import_cat.NomEtPrenomElecteur=importations.NomEtPrenomElecteur'
+    + ' AND import_cat.NomEtPrenomElecteur=import_jointure.NomEtPrenomElecteur3 '
+    + 'GROUP by importations.Raison_Social HAVING (list_secteur like''%Com D%'')'
+    + ' and (list_secteur <>''Com D'')' +
+    ' order by importations.NomEtPrenomElecteur ';
+  DM.UniQuery2.Open;
+  Form17.ShowModal;
+end;
+
+procedure TForm16.W7SpeedButton5Click(Sender: TObject);
+begin
+  DM.UniQuery2.Close;
+  DM.UniQuery2.SQL.Clear;
+  DM.UniQuery2.SQL.Text :=
+    'SELECT *, GROUP_CONCAT(DISTINCT import_cat.Categorie SEPARATOR '','') as list_secteur'
+    + ' from importations,import_cat,import_jointure WHERE import_cat.NomEtPrenomElecteur=importations.NomEtPrenomElecteur'
+    + ' AND import_cat.NomEtPrenomElecteur=import_jointure.NomEtPrenomElecteur3 '
+    + 'GROUP by importations.Raison_Social HAVING (list_secteur like''%Com XYZ%'')'
+    + ' and (list_secteur <>''Com XYZ'')' +
+    ' order by importations.NomEtPrenomElecteur ';
+  DM.UniQuery2.Open;
+  Form17.ShowModal;
+end;
+
+end.

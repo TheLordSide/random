@@ -1,0 +1,106 @@
+object Form13: TForm13
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'LISTE DOSSIER MANQUANT LOME COMMUNE'
+  ClientHeight = 398
+  ClientWidth = 767
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Style = [fsBold]
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 21
+  object GridPanel32: TGridPanel
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 761
+    Height = 43
+    Align = alTop
+    BevelKind = bkFlat
+    ColumnCollection = <
+      item
+        Value = 33.333333333333350000
+      end
+      item
+        Value = 33.333333333333330000
+      end
+      item
+        Value = 33.333333333333320000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = Label32
+        Row = 0
+      end
+      item
+        Column = 2
+        Control = SpeedButton47
+        Row = 0
+      end
+      item
+        Column = 1
+        Control = ComboBox5
+        Row = 0
+      end>
+    RowCollection = <
+      item
+        Value = 100.000000000000000000
+      end>
+    TabOrder = 0
+    ExplicitWidth = 969
+    DesignSize = (
+      757
+      39)
+    object Label32: TLabel
+      Left = 49
+      Top = 9
+      Width = 154
+      Height = 21
+      Anchors = []
+      Caption = 'Criteres de selection'
+      ExplicitLeft = 80
+      ExplicitTop = 11
+    end
+    object SpeedButton47: TSpeedButton
+      Left = 559
+      Top = 8
+      Width = 140
+      Height = 22
+      Anchors = []
+      Caption = 'PDF / EXCEL'
+      OnClick = SpeedButton47Click
+      ExplicitLeft = 570
+      ExplicitTop = 9
+    end
+    object ComboBox5: TComboBox
+      AlignWithMargins = True
+      Left = 255
+      Top = 4
+      Width = 245
+      Height = 29
+      Align = alClient
+      TabOrder = 0
+      TextHint = 'Selection'
+      Items.Strings = (
+        'Dossier avec photo manquant'
+        'Dossier avec Carte CCIT manquante'
+        'Dossier avec Carte CFE manquante'
+        'Dossier avec PI manquantes'
+        'Dossier avec Quitus Fiscale manquant'
+        'Dossier avec Quitus CCIT manquant'
+        'Dossiers Complets')
+      ExplicitLeft = 349
+      ExplicitTop = 11
+      ExplicitWidth = 253
+    end
+  end
+end

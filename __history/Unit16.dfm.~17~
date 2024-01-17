@@ -1,0 +1,1596 @@
+object Form16: TForm16
+  Left = 0
+  Top = 0
+  Caption = 'SIMULATION LOME COMMUNE UPDATE'
+  ClientHeight = 824
+  ClientWidth = 1466
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Style = [fsBold]
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 21
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 1466
+    Height = 824
+    ActivePage = TabSheet2
+    Align = alClient
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'COMMERCE'
+      object GridPanel1: TGridPanel
+        Left = 0
+        Top = 0
+        Width = 1458
+        Height = 380
+        Align = alTop
+        ColumnCollection = <
+          item
+            Value = 20.000000000000000000
+          end
+          item
+            Value = 20.000000000000000000
+          end
+          item
+            Value = 20.000000000000000000
+          end
+          item
+            Value = 20.000000000000000000
+          end
+          item
+            Value = 20.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = Panel1
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = Panel2
+            Row = 0
+          end
+          item
+            Column = 2
+            Control = Panel3
+            Row = 0
+          end
+          item
+            Column = 3
+            Control = Panel4
+            Row = 0
+          end
+          item
+            Column = 0
+            Control = Label17
+            Row = 1
+          end
+          item
+            Column = 1
+            Control = Label18
+            Row = 1
+          end
+          item
+            Column = 2
+            Control = Label19
+            Row = 1
+          end
+          item
+            Column = 3
+            Control = Label20
+            Row = 1
+          end
+          item
+            Column = 0
+            Control = GridPanel2
+            Row = 2
+          end
+          item
+            Column = 1
+            Control = GridPanel3
+            Row = 2
+          end
+          item
+            Column = 2
+            Control = GridPanel4
+            Row = 2
+          end
+          item
+            Column = 3
+            Control = GridPanel5
+            Row = 2
+          end
+          item
+            Column = 4
+            Control = Panel5
+            Row = 0
+          end
+          item
+            Column = 4
+            Control = Label21
+            Row = 1
+          end
+          item
+            Column = 4
+            Control = GridPanel6
+            Row = 2
+          end
+          item
+            Column = 1
+            Control = W7SpeedButton2
+            Row = 3
+          end
+          item
+            Column = 2
+            Control = W7SpeedButton3
+            Row = 3
+          end
+          item
+            Column = 3
+            Control = W7SpeedButton4
+            Row = 3
+          end
+          item
+            Column = 4
+            Control = W7SpeedButton5
+            Row = 3
+          end
+          item
+            Column = 0
+            Control = W7SpeedButton1
+            Row = 3
+          end>
+        RowCollection = <
+          item
+            Value = 25.000000000000000000
+          end
+          item
+            Value = 25.000000000000000000
+          end
+          item
+            Value = 25.000000000000000000
+          end
+          item
+            Value = 25.000000000000000000
+          end
+          item
+            SizeStyle = ssAuto
+          end>
+        TabOrder = 0
+        DesignSize = (
+          1458
+          380)
+        object Panel1: TPanel
+          Left = 1
+          Top = 1
+          Width = 291
+          Height = 94
+          Align = alClient
+          Caption = 'CATEGORIE A'
+          TabOrder = 0
+        end
+        object Panel2: TPanel
+          Left = 292
+          Top = 1
+          Width = 291
+          Height = 94
+          Align = alClient
+          Caption = 'CATEGORIE B'
+          TabOrder = 1
+        end
+        object Panel3: TPanel
+          Left = 583
+          Top = 1
+          Width = 291
+          Height = 94
+          Align = alClient
+          Caption = 'CATEGORIE C'
+          TabOrder = 2
+        end
+        object Panel4: TPanel
+          Left = 874
+          Top = 1
+          Width = 291
+          Height = 94
+          Align = alClient
+          Caption = 'CATEGORIE D'
+          TabOrder = 3
+        end
+        object Label17: TLabel
+          Left = 142
+          Top = 131
+          Width = 9
+          Height = 21
+          Anchors = []
+          Caption = '0'
+          ExplicitLeft = 131
+          ExplicitTop = 305
+        end
+        object Label18: TLabel
+          Left = 433
+          Top = 131
+          Width = 9
+          Height = 21
+          Anchors = []
+          Caption = '0'
+          ExplicitLeft = 450
+          ExplicitTop = 305
+        end
+        object Label19: TLabel
+          Left = 724
+          Top = 131
+          Width = 9
+          Height = 21
+          Anchors = []
+          Caption = '0'
+          ExplicitLeft = 769
+          ExplicitTop = 305
+        end
+        object Label20: TLabel
+          Left = 1015
+          Top = 131
+          Width = 9
+          Height = 21
+          Anchors = []
+          Caption = '0'
+          ExplicitLeft = 1089
+          ExplicitTop = 305
+        end
+        object GridPanel2: TGridPanel
+          Left = 1
+          Top = 189
+          Width = 291
+          Height = 94
+          Align = alClient
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Label1
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = Label2
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Label9
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = Label10
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 4
+          DesignSize = (
+            291
+            94)
+          object Label1: TLabel
+            Left = 36
+            Top = 13
+            Width = 74
+            Height = 21
+            Anchors = []
+            Caption = 'STATIQUE'
+            ExplicitLeft = 43
+            ExplicitTop = 55
+          end
+          object Label2: TLabel
+            Left = 168
+            Top = 13
+            Width = 99
+            Height = 21
+            Anchors = []
+            Caption = 'DYNAMIQUE'
+            ExplicitLeft = 180
+            ExplicitTop = 55
+          end
+          object Label9: TLabel
+            Left = 68
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 78
+            ExplicitTop = 83
+          end
+          object Label10: TLabel
+            Left = 213
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 236
+            ExplicitTop = 83
+          end
+        end
+        object GridPanel3: TGridPanel
+          Left = 292
+          Top = 189
+          Width = 291
+          Height = 94
+          Align = alClient
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Label3
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = Label4
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Label11
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = Label12
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 5
+          DesignSize = (
+            291
+            94)
+          object Label3: TLabel
+            Left = 36
+            Top = 13
+            Width = 74
+            Height = 21
+            Anchors = []
+            Caption = 'STATIQUE'
+            ExplicitLeft = 73
+            ExplicitTop = 55
+          end
+          object Label4: TLabel
+            Left = 168
+            Top = 13
+            Width = 99
+            Height = 21
+            Anchors = []
+            Caption = 'DYNAMIQUE'
+            ExplicitLeft = 223
+            ExplicitTop = 55
+          end
+          object Label11: TLabel
+            Left = 68
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 78
+            ExplicitTop = 83
+          end
+          object Label12: TLabel
+            Left = 213
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 236
+            ExplicitTop = 83
+          end
+        end
+        object GridPanel4: TGridPanel
+          Left = 583
+          Top = 189
+          Width = 291
+          Height = 94
+          Align = alClient
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Label5
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = Label6
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Label13
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = Label14
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 6
+          DesignSize = (
+            291
+            94)
+          object Label5: TLabel
+            Left = 36
+            Top = 13
+            Width = 74
+            Height = 21
+            Anchors = []
+            Caption = 'STATIQUE'
+            ExplicitLeft = 73
+            ExplicitTop = 55
+          end
+          object Label6: TLabel
+            Left = 168
+            Top = 13
+            Width = 99
+            Height = 21
+            Anchors = []
+            Caption = 'DYNAMIQUE'
+            ExplicitLeft = 223
+            ExplicitTop = 55
+          end
+          object Label13: TLabel
+            Left = 68
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 78
+            ExplicitTop = 83
+          end
+          object Label14: TLabel
+            Left = 213
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 236
+            ExplicitTop = 83
+          end
+        end
+        object GridPanel5: TGridPanel
+          Left = 874
+          Top = 189
+          Width = 291
+          Height = 94
+          Align = alClient
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Label7
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = Label8
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Label15
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = Label16
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 7
+          DesignSize = (
+            291
+            94)
+          object Label7: TLabel
+            Left = 36
+            Top = 13
+            Width = 74
+            Height = 21
+            Anchors = []
+            Caption = 'STATIQUE'
+            ExplicitLeft = 73
+            ExplicitTop = 55
+          end
+          object Label8: TLabel
+            Left = 168
+            Top = 13
+            Width = 99
+            Height = 21
+            Anchors = []
+            Caption = 'DYNAMIQUE'
+            ExplicitLeft = 223
+            ExplicitTop = 55
+          end
+          object Label15: TLabel
+            Left = 68
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 78
+            ExplicitTop = 83
+          end
+          object Label16: TLabel
+            Left = 213
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 238
+            ExplicitTop = 83
+          end
+        end
+        object Panel5: TPanel
+          Left = 1165
+          Top = 1
+          Width = 292
+          Height = 94
+          Align = alClient
+          Caption = 'CATEGORIE N/A'
+          TabOrder = 8
+        end
+        object Label21: TLabel
+          Left = 1306
+          Top = 131
+          Width = 9
+          Height = 21
+          Anchors = []
+          Caption = '0'
+          ExplicitLeft = 1145
+          ExplicitTop = 179
+        end
+        object GridPanel6: TGridPanel
+          Left = 1165
+          Top = 189
+          Width = 292
+          Height = 94
+          Align = alClient
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Label22
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = Label23
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Label24
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = Label25
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 9
+          DesignSize = (
+            292
+            94)
+          object Label22: TLabel
+            Left = 36
+            Top = 13
+            Width = 74
+            Height = 21
+            Anchors = []
+            Caption = 'STATIQUE'
+            ExplicitLeft = 73
+            ExplicitTop = 55
+          end
+          object Label23: TLabel
+            Left = 169
+            Top = 13
+            Width = 99
+            Height = 21
+            Anchors = []
+            Caption = 'DYNAMIQUE'
+            ExplicitLeft = 223
+            ExplicitTop = 55
+          end
+          object Label24: TLabel
+            Left = 69
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 78
+            ExplicitTop = 83
+          end
+          object Label25: TLabel
+            Left = 214
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 238
+            ExplicitTop = 83
+          end
+        end
+        object W7SpeedButton2: TW7SpeedButton
+          Left = 362
+          Top = 310
+          Width = 150
+          Height = 40
+          Caption = 'DEPLACER'
+          Flat = False
+          Light = False
+          FadeInInterval = 15
+          FadeOutInterval = 40
+          IconSize = is16px
+          ArrowType = atDown
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5978398
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Anchors = []
+          ParentFont = False
+          OnClick = W7SpeedButton2Click
+          ExplicitTop = 317
+        end
+        object W7SpeedButton3: TW7SpeedButton
+          Left = 653
+          Top = 310
+          Width = 150
+          Height = 40
+          Caption = 'DEPLACER'
+          Flat = False
+          Light = False
+          FadeInInterval = 15
+          FadeOutInterval = 40
+          IconSize = is16px
+          ArrowType = atDown
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5978398
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Anchors = []
+          ParentFont = False
+          OnClick = W7SpeedButton3Click
+          ExplicitTop = 317
+        end
+        object W7SpeedButton4: TW7SpeedButton
+          Left = 944
+          Top = 310
+          Width = 150
+          Height = 40
+          Caption = 'DEPLACER'
+          Flat = False
+          Light = False
+          FadeInInterval = 15
+          FadeOutInterval = 40
+          IconSize = is16px
+          ArrowType = atDown
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5978398
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Anchors = []
+          ParentFont = False
+          OnClick = W7SpeedButton4Click
+          ExplicitTop = 317
+        end
+        object W7SpeedButton5: TW7SpeedButton
+          Left = 1236
+          Top = 310
+          Width = 150
+          Height = 40
+          Caption = 'DEPLACER'
+          Flat = False
+          Light = False
+          FadeInInterval = 15
+          FadeOutInterval = 40
+          IconSize = is16px
+          ArrowType = atDown
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5978398
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Anchors = []
+          ParentFont = False
+          OnClick = W7SpeedButton5Click
+          ExplicitTop = 317
+        end
+        object W7SpeedButton1: TW7SpeedButton
+          Left = 71
+          Top = 310
+          Width = 150
+          Height = 40
+          Caption = 'DEPLACER'
+          Flat = False
+          Light = False
+          FadeInInterval = 15
+          FadeOutInterval = 40
+          IconSize = is16px
+          ArrowType = atDown
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5978398
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Anchors = []
+          ParentFont = False
+          OnClick = W7SpeedButton1Click
+          ExplicitLeft = 69
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'INDUSTRIE'
+      ImageIndex = 1
+      object GridPanel7: TGridPanel
+        Left = 0
+        Top = 0
+        Width = 1458
+        Height = 380
+        Align = alTop
+        ColumnCollection = <
+          item
+            Value = 20.000000000000000000
+          end
+          item
+            Value = 20.000000000000000000
+          end
+          item
+            Value = 20.000000000000000000
+          end
+          item
+            Value = 20.000000000000000000
+          end
+          item
+            Value = 20.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = Panel6
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = Panel7
+            Row = 0
+          end
+          item
+            Column = 2
+            Control = Panel8
+            Row = 0
+          end
+          item
+            Column = 3
+            Control = Panel9
+            Row = 0
+          end
+          item
+            Column = 0
+            Control = Label26
+            Row = 1
+          end
+          item
+            Column = 1
+            Control = Label27
+            Row = 1
+          end
+          item
+            Column = 2
+            Control = Label28
+            Row = 1
+          end
+          item
+            Column = 3
+            Control = Label29
+            Row = 1
+          end
+          item
+            Column = 0
+            Control = GridPanel8
+            Row = 2
+          end
+          item
+            Column = 1
+            Control = GridPanel9
+            Row = 2
+          end
+          item
+            Column = 2
+            Control = GridPanel10
+            Row = 2
+          end
+          item
+            Column = 3
+            Control = GridPanel11
+            Row = 2
+          end
+          item
+            Column = 4
+            Control = Panel10
+            Row = 0
+          end
+          item
+            Column = 4
+            Control = Label46
+            Row = 1
+          end
+          item
+            Column = 4
+            Control = GridPanel12
+            Row = 2
+          end
+          item
+            Column = 1
+            Control = W7SpeedButton6
+            Row = 3
+          end
+          item
+            Column = 2
+            Control = W7SpeedButton7
+            Row = 3
+          end
+          item
+            Column = 3
+            Control = W7SpeedButton8
+            Row = 3
+          end
+          item
+            Column = 4
+            Control = W7SpeedButton9
+            Row = 3
+          end
+          item
+            Column = 0
+            Control = W7SpeedButton10
+            Row = 3
+          end>
+        RowCollection = <
+          item
+            Value = 25.000000000000000000
+          end
+          item
+            Value = 25.000000000000000000
+          end
+          item
+            Value = 25.000000000000000000
+          end
+          item
+            Value = 25.000000000000000000
+          end
+          item
+            SizeStyle = ssAuto
+          end>
+        TabOrder = 0
+        ExplicitTop = 8
+        DesignSize = (
+          1458
+          380)
+        object Panel6: TPanel
+          Left = 1
+          Top = 1
+          Width = 291
+          Height = 94
+          Align = alClient
+          Caption = 'CATEGORIE A'
+          TabOrder = 0
+        end
+        object Panel7: TPanel
+          Left = 292
+          Top = 1
+          Width = 291
+          Height = 94
+          Align = alClient
+          Caption = 'CATEGORIE B'
+          TabOrder = 1
+        end
+        object Panel8: TPanel
+          Left = 583
+          Top = 1
+          Width = 291
+          Height = 94
+          Align = alClient
+          Caption = 'CATEGORIE C'
+          TabOrder = 2
+        end
+        object Panel9: TPanel
+          Left = 874
+          Top = 1
+          Width = 291
+          Height = 94
+          Align = alClient
+          Caption = 'CATEGORIE D'
+          TabOrder = 3
+        end
+        object Label26: TLabel
+          Left = 142
+          Top = 131
+          Width = 9
+          Height = 21
+          Anchors = []
+          Caption = '0'
+          ExplicitLeft = 131
+          ExplicitTop = 305
+        end
+        object Label27: TLabel
+          Left = 433
+          Top = 131
+          Width = 9
+          Height = 21
+          Anchors = []
+          Caption = '0'
+          ExplicitLeft = 450
+          ExplicitTop = 305
+        end
+        object Label28: TLabel
+          Left = 724
+          Top = 131
+          Width = 9
+          Height = 21
+          Anchors = []
+          Caption = '0'
+          ExplicitLeft = 769
+          ExplicitTop = 305
+        end
+        object Label29: TLabel
+          Left = 1015
+          Top = 131
+          Width = 9
+          Height = 21
+          Anchors = []
+          Caption = '0'
+          ExplicitLeft = 1089
+          ExplicitTop = 305
+        end
+        object GridPanel8: TGridPanel
+          Left = 1
+          Top = 189
+          Width = 291
+          Height = 94
+          Align = alClient
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Label30
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = Label31
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Label32
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = Label33
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 4
+          DesignSize = (
+            291
+            94)
+          object Label30: TLabel
+            Left = 36
+            Top = 13
+            Width = 74
+            Height = 21
+            Anchors = []
+            Caption = 'STATIQUE'
+            ExplicitLeft = 43
+            ExplicitTop = 55
+          end
+          object Label31: TLabel
+            Left = 168
+            Top = 13
+            Width = 99
+            Height = 21
+            Anchors = []
+            Caption = 'DYNAMIQUE'
+            ExplicitLeft = 180
+            ExplicitTop = 55
+          end
+          object Label32: TLabel
+            Left = 68
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 78
+            ExplicitTop = 83
+          end
+          object Label33: TLabel
+            Left = 213
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 236
+            ExplicitTop = 83
+          end
+        end
+        object GridPanel9: TGridPanel
+          Left = 292
+          Top = 189
+          Width = 291
+          Height = 94
+          Align = alClient
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Label34
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = Label35
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Label36
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = Label37
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 5
+          DesignSize = (
+            291
+            94)
+          object Label34: TLabel
+            Left = 36
+            Top = 13
+            Width = 74
+            Height = 21
+            Anchors = []
+            Caption = 'STATIQUE'
+            ExplicitLeft = 73
+            ExplicitTop = 55
+          end
+          object Label35: TLabel
+            Left = 168
+            Top = 13
+            Width = 99
+            Height = 21
+            Anchors = []
+            Caption = 'DYNAMIQUE'
+            ExplicitLeft = 223
+            ExplicitTop = 55
+          end
+          object Label36: TLabel
+            Left = 68
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 78
+            ExplicitTop = 83
+          end
+          object Label37: TLabel
+            Left = 213
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 236
+            ExplicitTop = 83
+          end
+        end
+        object GridPanel10: TGridPanel
+          Left = 583
+          Top = 189
+          Width = 291
+          Height = 94
+          Align = alClient
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Label38
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = Label39
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Label40
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = Label41
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 6
+          DesignSize = (
+            291
+            94)
+          object Label38: TLabel
+            Left = 36
+            Top = 13
+            Width = 74
+            Height = 21
+            Anchors = []
+            Caption = 'STATIQUE'
+            ExplicitLeft = 73
+            ExplicitTop = 55
+          end
+          object Label39: TLabel
+            Left = 168
+            Top = 13
+            Width = 99
+            Height = 21
+            Anchors = []
+            Caption = 'DYNAMIQUE'
+            ExplicitLeft = 223
+            ExplicitTop = 55
+          end
+          object Label40: TLabel
+            Left = 68
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 78
+            ExplicitTop = 83
+          end
+          object Label41: TLabel
+            Left = 213
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 236
+            ExplicitTop = 83
+          end
+        end
+        object GridPanel11: TGridPanel
+          Left = 874
+          Top = 189
+          Width = 291
+          Height = 94
+          Align = alClient
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Label42
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = Label43
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Label44
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = Label45
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 7
+          DesignSize = (
+            291
+            94)
+          object Label42: TLabel
+            Left = 36
+            Top = 13
+            Width = 74
+            Height = 21
+            Anchors = []
+            Caption = 'STATIQUE'
+            ExplicitLeft = 73
+            ExplicitTop = 55
+          end
+          object Label43: TLabel
+            Left = 168
+            Top = 13
+            Width = 99
+            Height = 21
+            Anchors = []
+            Caption = 'DYNAMIQUE'
+            ExplicitLeft = 223
+            ExplicitTop = 55
+          end
+          object Label44: TLabel
+            Left = 68
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 78
+            ExplicitTop = 83
+          end
+          object Label45: TLabel
+            Left = 213
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 238
+            ExplicitTop = 83
+          end
+        end
+        object Panel10: TPanel
+          Left = 1165
+          Top = 1
+          Width = 292
+          Height = 94
+          Align = alClient
+          Caption = 'CATEGORIE E'
+          TabOrder = 8
+        end
+        object Label46: TLabel
+          Left = 1306
+          Top = 131
+          Width = 9
+          Height = 21
+          Anchors = []
+          Caption = '0'
+          ExplicitLeft = 1145
+          ExplicitTop = 179
+        end
+        object GridPanel12: TGridPanel
+          Left = 1165
+          Top = 189
+          Width = 292
+          Height = 94
+          Align = alClient
+          ColumnCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Label47
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = Label48
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Label49
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = Label50
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 9
+          DesignSize = (
+            292
+            94)
+          object Label47: TLabel
+            Left = 36
+            Top = 13
+            Width = 74
+            Height = 21
+            Anchors = []
+            Caption = 'STATIQUE'
+            ExplicitLeft = 73
+            ExplicitTop = 55
+          end
+          object Label48: TLabel
+            Left = 169
+            Top = 13
+            Width = 99
+            Height = 21
+            Anchors = []
+            Caption = 'DYNAMIQUE'
+            ExplicitLeft = 223
+            ExplicitTop = 55
+          end
+          object Label49: TLabel
+            Left = 69
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 78
+            ExplicitTop = 83
+          end
+          object Label50: TLabel
+            Left = 214
+            Top = 59
+            Width = 9
+            Height = 21
+            Anchors = []
+            Caption = '0'
+            ExplicitLeft = 238
+            ExplicitTop = 83
+          end
+        end
+        object W7SpeedButton6: TW7SpeedButton
+          Left = 362
+          Top = 310
+          Width = 150
+          Height = 40
+          Caption = 'DEPLACER'
+          Flat = False
+          Light = False
+          FadeInInterval = 15
+          FadeOutInterval = 40
+          IconSize = is16px
+          ArrowType = atDown
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5978398
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Anchors = []
+          ParentFont = False
+          OnClick = W7SpeedButton6Click
+          ExplicitTop = 317
+        end
+        object W7SpeedButton7: TW7SpeedButton
+          Left = 653
+          Top = 310
+          Width = 150
+          Height = 40
+          Caption = 'DEPLACER'
+          Flat = False
+          Light = False
+          FadeInInterval = 15
+          FadeOutInterval = 40
+          IconSize = is16px
+          ArrowType = atDown
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5978398
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Anchors = []
+          ParentFont = False
+          OnClick = W7SpeedButton7Click
+          ExplicitTop = 317
+        end
+        object W7SpeedButton8: TW7SpeedButton
+          Left = 944
+          Top = 310
+          Width = 150
+          Height = 40
+          Caption = 'DEPLACER'
+          Flat = False
+          Light = False
+          FadeInInterval = 15
+          FadeOutInterval = 40
+          IconSize = is16px
+          ArrowType = atDown
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5978398
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Anchors = []
+          ParentFont = False
+          OnClick = W7SpeedButton8Click
+          ExplicitLeft = 946
+        end
+        object W7SpeedButton9: TW7SpeedButton
+          Left = 1236
+          Top = 310
+          Width = 150
+          Height = 40
+          Caption = 'DEPLACER'
+          Flat = False
+          Light = False
+          FadeInInterval = 15
+          FadeOutInterval = 40
+          IconSize = is16px
+          ArrowType = atDown
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5978398
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Anchors = []
+          ParentFont = False
+          OnClick = W7SpeedButton9Click
+          ExplicitTop = 317
+        end
+        object W7SpeedButton10: TW7SpeedButton
+          Left = 71
+          Top = 310
+          Width = 150
+          Height = 40
+          Caption = 'DEPLACER'
+          Flat = False
+          Light = False
+          FadeInInterval = 15
+          FadeOutInterval = 40
+          IconSize = is16px
+          ArrowType = atDown
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = 5978398
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          Anchors = []
+          ParentFont = False
+          OnClick = W7SpeedButton10Click
+          ExplicitLeft = 69
+        end
+      end
+    end
+    object TabSheet3: TTabSheet
+      Caption = 'SERVICE'
+      ImageIndex = 2
+    end
+  end
+end

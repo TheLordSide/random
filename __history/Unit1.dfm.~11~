@@ -1,0 +1,119 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'LOGIN'
+  ClientHeight = 355
+  ClientWidth = 360
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Style = [fsBold]
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 21
+  object GridPanel1: TGridPanel
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 354
+    Height = 350
+    Align = alTop
+    BevelKind = bkFlat
+    ColumnCollection = <
+      item
+        Value = 100.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = Button1
+        Row = 2
+      end
+      item
+        Column = 0
+        Control = Button2
+        Row = 3
+      end
+      item
+        Column = 0
+        Control = Edit1
+        Row = 0
+      end
+      item
+        Column = 0
+        Control = Edit2
+        Row = 1
+      end>
+    RowCollection = <
+      item
+        Value = 25.000000000000000000
+      end
+      item
+        Value = 25.000000000000000000
+      end
+      item
+        Value = 25.000000000000000000
+      end
+      item
+        Value = 25.000000000000000000
+      end>
+    TabOrder = 0
+    DesignSize = (
+      350
+      346)
+    object Button1: TButton
+      Left = 96
+      Top = 193
+      Width = 158
+      Height = 45
+      Anchors = []
+      Caption = 'Connexion'
+      TabOrder = 0
+      OnClick = Button1Click
+      ExplicitLeft = 98
+      ExplicitTop = 196
+    end
+    object Button2: TButton
+      Left = 96
+      Top = 279
+      Width = 158
+      Height = 45
+      Anchors = []
+      Caption = 'Quitter'
+      TabOrder = 1
+      OnClick = Button2Click
+      ExplicitLeft = 98
+      ExplicitTop = 283
+    end
+    object Edit1: TEdit
+      Left = 23
+      Top = 29
+      Width = 304
+      Height = 29
+      Anchors = []
+      MaxLength = 10
+      TabOrder = 2
+      TextHint = 'USERNAME'
+      ExplicitLeft = 25
+      ExplicitTop = 30
+    end
+    object Edit2: TEdit
+      Left = 23
+      Top = 115
+      Width = 304
+      Height = 29
+      Anchors = []
+      MaxLength = 10
+      PasswordChar = '*'
+      TabOrder = 3
+      TextHint = 'PASSWORD'
+      ExplicitLeft = 25
+      ExplicitTop = 117
+    end
+  end
+end

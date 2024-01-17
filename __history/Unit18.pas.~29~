@@ -1,0 +1,158 @@
+unit Unit18;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.WinXCtrls,
+  Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Vcl.Menus, MemDS, DBAccess, Uni,
+  Vcl.CheckLst, Vcl.Buttons;
+
+type
+  TForm18 = class(TForm)
+    Panel1: TPanel;
+    Panel2: TPanel;
+    Label1: TLabel;
+    DBGrid1: TDBGrid;
+    DataSource1: TDataSource;
+    SearchBox1: TSearchBox;
+    PopupMenu1: TPopupMenu;
+    Panel4: TPanel;
+    Label4: TLabel;
+    DataSource2: TDataSource;
+    UniQuery1: TUniQuery;
+    Misejour1: TMenuItem;
+    Categorie1: TMenuItem;
+    Secteur1: TMenuItem;
+    Commerce1: TMenuItem;
+    Industrie1: TMenuItem;
+    Service1: TMenuItem;
+    ComA1: TMenuItem;
+    ComB1: TMenuItem;
+    ComC1: TMenuItem;
+    ComD1: TMenuItem;
+    SerA1: TMenuItem;
+    SerB1: TMenuItem;
+    SerB21: TMenuItem;
+    SerB31: TMenuItem;
+    SerB41: TMenuItem;
+    SerB51: TMenuItem;
+    SerB61: TMenuItem;
+    SerC1: TMenuItem;
+    SerD1G11: TMenuItem;
+    SerD1G21: TMenuItem;
+    SerD1G31: TMenuItem;
+    SerD1G41: TMenuItem;
+    SerD1G51: TMenuItem;
+    SerD21: TMenuItem;
+    IndA1: TMenuItem;
+    IndB1: TMenuItem;
+    IndC1: TMenuItem;
+    IndD1: TMenuItem;
+    IndE1: TMenuItem;
+    Panel3: TPanel;
+    Label2: TLabel;
+    ListBox2: TListBox;
+    Label3: TLabel;
+    PopupMenu2: TPopupMenu;
+    Button1: TButton;
+    ListBox1: TListBox;
+    ListBox3: TListBox;
+    SpeedButton1: TSpeedButton;
+    procedure SearchBox1Change(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure DBGrid1CellClick(Column: TColumn);
+    procedure Button1Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form18: TForm18;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1, Unit10, Unit11, Unit12, Unit13, Unit14, Unit15, Unit16, Unit17,
+  Unit2, Unit3, Unit4, Unit5, Unit6, Unit8, Unit9;
+
+procedure TForm18.Button1Click(Sender: TObject);
+var
+  i, j: integer;
+  str: string;
+begin
+  ListBox3.Items.Clear;
+  for i := 0 to ListBox1.Items.Count - 1 do
+  begin
+    str := ListBox1.Items[i];
+    if (ListBox2.Items.IndexOf(str) = -1) then
+    begin
+      ListBox3.Items.Add(str);
+    end;
+  end;
+end;
+
+procedure TForm18.DBGrid1CellClick(Column: TColumn);
+var
+  i: integer;
+begin
+  ListBox2.Clear;
+  Label4.Caption := DM.UniQuery4.FieldByName('NomEtPrenomElecteur').AsString;
+  UniQuery1.Close;
+  UniQuery1.SQL.Clear;
+  UniQuery1.SQL.Text := 'select * from pieces where NomEtPrenomElecteur=:p';
+  UniQuery1.Params.ParamByName('p').Value := Label4.Caption;
+  UniQuery1.Open;
+  UniQuery1.First;
+  for i := 0 to UniQuery1.RecordCount - 1 do
+  begin
+    ListBox2.Items.Add(UniQuery1.FieldByName('Nompiece').AsString);
+    UniQuery1.next;
+  end;
+
+  UniQuery1.Close;
+  UniQuery1.SQL.Text := 'select * from categories where NomEtPrenomElecteur=:p';
+  UniQuery1.Params.ParamByName('p').Value := Label4.Caption;
+  UniQuery1.Open;
+end;
+
+procedure TForm18.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Form3.Show;
+end;
+
+procedure TForm18.SearchBox1Change(Sender: TObject);
+begin
+  if SearchBox1.Text <> '' then
+  begin
+    DM.UniQuery4.Filtered := false;
+    DM.UniQuery4.Filter :=
+      ('RaisonSocial like ' + QuotedStr('%' + SearchBox1.Text + '%')) + ' or ' +
+      ('NomEtPrenomElecteur like ' + QuotedStr('%' + SearchBox1.Text + '%')) +
+      ' or ' + ('Representant1 like ' + QuotedStr('%' + SearchBox1.Text + '%'));
+    DM.UniQuery4.Filtered := True;
+  end
+  else
+  begin
+    DM.UniQuery4.Filtered := false;
+  end;
+end;
+
+procedure TForm18.SpeedButton1Click(Sender: TObject);
+var
+  i: integer;
+begin
+  for i := 0 to UniQuery1.RecordCount - 1 do
+  begin
+  DBGrid1CellClick;
+  Button1Click(self);
+  end;
+
+end;
+
+end.

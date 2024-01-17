@@ -1,0 +1,769 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Align = alClient
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'SIMULATION REGION'
+  ClientHeight = 852
+  ClientWidth = 1231
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -16
+  Font.Name = 'Segoe UI'
+  Font.Style = [fsBold]
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 21
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 1231
+    Height = 852
+    ActivePage = TabSheet2
+    Align = alClient
+    TabOrder = 0
+    object TabSheet1: TTabSheet
+      Caption = 'Creer / Charger une simulation'
+      object GroupBox2: TGroupBox
+        AlignWithMargins = True
+        Left = 3
+        Top = 3
+        Width = 1217
+        Height = 158
+        Align = alTop
+        Caption = 'Nouvelle simulation'
+        TabOrder = 0
+        object GridPanel26: TGridPanel
+          AlignWithMargins = True
+          Left = 5
+          Top = 26
+          Width = 1207
+          Height = 125
+          Align = alTop
+          BevelKind = bkFlat
+          ColumnCollection = <
+            item
+              Value = 100.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Edit21
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Edit22
+              Row = 1
+            end
+            item
+              Column = 0
+              Control = SpeedButton41
+              Row = 2
+            end>
+          RowCollection = <
+            item
+              Value = 33.333333333333350000
+            end
+            item
+              Value = 33.333333333333330000
+            end
+            item
+              Value = 33.333333333333320000
+            end>
+          TabOrder = 0
+          DesignSize = (
+            1203
+            121)
+          object Edit21: TEdit
+            AlignWithMargins = True
+            Left = 4
+            Top = 4
+            Width = 1195
+            Height = 33
+            Align = alClient
+            CharCase = ecUpperCase
+            TabOrder = 0
+            TextHint = 'NOM DE LA SIMULATION'
+            ExplicitHeight = 29
+          end
+          object Edit22: TEdit
+            AlignWithMargins = True
+            Left = 4
+            Top = 43
+            Width = 1195
+            Height = 33
+            Align = alClient
+            CharCase = ecUpperCase
+            TabOrder = 1
+            TextHint = 'AUTEUR'
+            ExplicitHeight = 29
+          end
+          object SpeedButton41: TSpeedButton
+            Left = 471
+            Top = 83
+            Width = 260
+            Height = 33
+            Anchors = []
+            Caption = 'Creer'
+            OnClick = SpeedButton41Click
+            ExplicitLeft = 466
+            ExplicitTop = 82
+          end
+        end
+      end
+      object GroupBox3: TGroupBox
+        AlignWithMargins = True
+        Left = 3
+        Top = 167
+        Width = 1217
+        Height = 114
+        Align = alTop
+        Caption = 'Charger simulation existante'
+        TabOrder = 1
+        object GridPanel27: TGridPanel
+          AlignWithMargins = True
+          Left = 5
+          Top = 26
+          Width = 1207
+          Height = 79
+          Align = alTop
+          BevelKind = bkFlat
+          ColumnCollection = <
+            item
+              Value = 33.333333333333350000
+            end
+            item
+              Value = 33.333333333333330000
+            end
+            item
+              Value = 33.333333333333320000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Label29
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Label30
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = Label31
+              Row = 1
+            end
+            item
+              Column = 2
+              Control = SpeedButton42
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = DBLookupComboBox1
+              Row = 0
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 0
+          DesignSize = (
+            1203
+            75)
+          object Label29: TLabel
+            Left = 121
+            Top = 8
+            Width = 159
+            Height = 21
+            Anchors = []
+            Caption = 'Simulation a charger'
+            ExplicitLeft = 90
+          end
+          object Label30: TLabel
+            Left = 195
+            Top = 45
+            Width = 12
+            Height = 21
+            Anchors = []
+            Caption = '...'
+            ExplicitLeft = 133
+            ExplicitTop = 37
+          end
+          object Label31: TLabel
+            Left = 595
+            Top = 45
+            Width = 12
+            Height = 21
+            Anchors = []
+            Caption = '...'
+            ExplicitLeft = 408
+            ExplicitTop = 37
+          end
+          object SpeedButton42: TSpeedButton
+            AlignWithMargins = True
+            Left = 804
+            Top = 4
+            Width = 395
+            Height = 30
+            Align = alClient
+            Caption = 'Charger'
+            OnClick = SpeedButton42Click
+            ExplicitLeft = 571
+            ExplicitTop = 10
+            ExplicitWidth = 168
+            ExplicitHeight = 22
+          end
+          object DBLookupComboBox1: TDBLookupComboBox
+            AlignWithMargins = True
+            Left = 404
+            Top = 4
+            Width = 394
+            Height = 29
+            Align = alClient
+            KeyField = 'id'
+            ListField = 'Nom'
+            ListSource = DataSource2
+            TabOrder = 0
+            OnCloseUp = DBLookupComboBox1CloseUp
+          end
+        end
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'Demarrer simulation'
+      ImageIndex = 1
+      object GridPanel1: TGridPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 3
+        Width = 1217
+        Height = 41
+        Align = alTop
+        BevelKind = bkFlat
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = Label1
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = ComboBox1
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        TabOrder = 0
+        DesignSize = (
+          1213
+          37)
+        object Label1: TLabel
+          Left = 240
+          Top = 8
+          Width = 126
+          Height = 21
+          Anchors = []
+          Caption = 'Filtre par Region'
+          ExplicitLeft = 243
+        end
+        object ComboBox1: TComboBox
+          AlignWithMargins = True
+          Left = 609
+          Top = 4
+          Width = 600
+          Height = 29
+          Align = alClient
+          Enabled = False
+          TabOrder = 0
+        end
+      end
+      object GridPanel2: TGridPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 85
+        Width = 1217
+        Height = 728
+        Align = alClient
+        BevelKind = bkFlat
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            ColumnSpan = 2
+            Control = DBGrid1
+            Row = 0
+          end
+          item
+            Column = 0
+            Control = GroupBox1
+            Row = 1
+          end
+          item
+            Column = 1
+            Control = GridPanel3
+            Row = 1
+          end>
+        RowCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            SizeStyle = ssAuto
+          end>
+        TabOrder = 1
+        object DBGrid1: TDBGrid
+          AlignWithMargins = True
+          Left = 4
+          Top = 4
+          Width = 1205
+          Height = 355
+          Align = alClient
+          DataSource = DataSource1
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick, dgTitleHotTrack]
+          PopupMenu = PopupMenu2
+          TabOrder = 0
+          TitleFont.Charset = ANSI_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -16
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = [fsBold]
+          OnCellClick = DBGrid1CellClick
+        end
+        object GroupBox1: TGroupBox
+          AlignWithMargins = True
+          Left = 4
+          Top = 365
+          Width = 599
+          Height = 355
+          Align = alClient
+          Caption = 'DETAILS DES ELECTEURS'
+          TabOrder = 1
+          object GridPanel4: TGridPanel
+            AlignWithMargins = True
+            Left = 5
+            Top = 116
+            Width = 589
+            Height = 39
+            Align = alTop
+            ColumnCollection = <
+              item
+                Value = 50.000000000000000000
+              end
+              item
+                Value = 50.000000000000000000
+              end>
+            ControlCollection = <
+              item
+                Column = 0
+                Control = Label6
+                Row = 0
+              end
+              item
+                Column = 1
+                Control = Label7
+                Row = 0
+              end>
+            RowCollection = <
+              item
+                Value = 100.000000000000000000
+              end>
+            TabOrder = 0
+            Visible = False
+            DesignSize = (
+              589
+              39)
+            object Label6: TLabel
+              Left = 120
+              Top = 9
+              Width = 54
+              Height = 21
+              Anchors = []
+              Caption = 'Region'
+              ExplicitLeft = 124
+            end
+            object Label7: TLabel
+              Left = 435
+              Top = 9
+              Width = 12
+              Height = 21
+              Anchors = []
+              Caption = '...'
+              ExplicitLeft = 433
+            end
+          end
+          object GridPanel5: TGridPanel
+            AlignWithMargins = True
+            Left = 5
+            Top = 71
+            Width = 589
+            Height = 39
+            Align = alTop
+            ColumnCollection = <
+              item
+                Value = 50.000000000000000000
+              end
+              item
+                Value = 50.000000000000000000
+              end>
+            ControlCollection = <
+              item
+                Column = 0
+                Control = Label4
+                Row = 0
+              end
+              item
+                Column = 1
+                Control = Label5
+                Row = 0
+              end>
+            RowCollection = <
+              item
+                Value = 100.000000000000000000
+              end>
+            TabOrder = 1
+            Visible = False
+            DesignSize = (
+              589
+              39)
+            object Label4: TLabel
+              Left = 87
+              Top = 9
+              Width = 121
+              Height = 21
+              Anchors = []
+              Caption = 'Nom et prenom'
+              ExplicitLeft = 93
+            end
+            object Label5: TLabel
+              Left = 435
+              Top = 9
+              Width = 12
+              Height = 21
+              Anchors = []
+              Caption = '...'
+              ExplicitLeft = 433
+            end
+          end
+          object GridPanel6: TGridPanel
+            AlignWithMargins = True
+            Left = 5
+            Top = 26
+            Width = 589
+            Height = 39
+            Align = alTop
+            ColumnCollection = <
+              item
+                Value = 50.000000000000000000
+              end
+              item
+                Value = 50.000000000000000000
+              end>
+            ControlCollection = <
+              item
+                Column = 0
+                Control = Label2
+                Row = 0
+              end
+              item
+                Column = 1
+                Control = Label3
+                Row = 0
+              end>
+            RowCollection = <
+              item
+                Value = 100.000000000000000000
+              end>
+            TabOrder = 2
+            Visible = False
+            DesignSize = (
+              589
+              39)
+            object Label2: TLabel
+              Left = 115
+              Top = 9
+              Width = 65
+              Height = 21
+              Anchors = []
+              Caption = 'Referant'
+              ExplicitLeft = 117
+            end
+            object Label3: TLabel
+              Left = 435
+              Top = 9
+              Width = 12
+              Height = 21
+              Anchors = []
+              Caption = '...'
+              ExplicitLeft = 433
+            end
+          end
+          object GridPanel7: TGridPanel
+            AlignWithMargins = True
+            Left = 5
+            Top = 161
+            Width = 589
+            Height = 39
+            Align = alTop
+            ColumnCollection = <
+              item
+                Value = 50.000000000000000000
+              end
+              item
+                Value = 50.000000000000000000
+              end>
+            ControlCollection = <
+              item
+                Column = 0
+                Control = Label10
+                Row = 0
+              end
+              item
+                Column = 1
+                Control = Label11
+                Row = 0
+              end>
+            RowCollection = <
+              item
+                Value = 100.000000000000000000
+              end>
+            TabOrder = 3
+            Visible = False
+            DesignSize = (
+              589
+              39)
+            object Label10: TLabel
+              Left = 92
+              Top = 9
+              Width = 110
+              Height = 21
+              Anchors = []
+              Caption = 'Raison Sociale'
+              ExplicitLeft = 96
+            end
+            object Label11: TLabel
+              Left = 435
+              Top = 9
+              Width = 12
+              Height = 21
+              Anchors = []
+              Caption = '...'
+              ExplicitLeft = 433
+            end
+          end
+          object GridPanel8: TGridPanel
+            AlignWithMargins = True
+            Left = 5
+            Top = 206
+            Width = 589
+            Height = 41
+            Align = alTop
+            ColumnCollection = <
+              item
+                Value = 50.000000000000000000
+              end
+              item
+                Value = 50.000000000000000000
+              end>
+            ControlCollection = <
+              item
+                Column = 0
+                Control = Label8
+                Row = 0
+              end
+              item
+                Column = 1
+                Control = Label9
+                Row = 0
+              end>
+            RowCollection = <
+              item
+                Value = 100.000000000000000000
+              end>
+            TabOrder = 4
+            DesignSize = (
+              589
+              41)
+            object Label8: TLabel
+              Left = 96
+              Top = 10
+              Width = 103
+              Height = 21
+              Anchors = []
+              Caption = 'Total present '
+              ExplicitLeft = 98
+            end
+            object Label9: TLabel
+              Left = 436
+              Top = 10
+              Width = 9
+              Height = 21
+              Anchors = []
+              Caption = '0'
+              ExplicitLeft = 416
+            end
+          end
+        end
+        object GridPanel3: TGridPanel
+          Left = 606
+          Top = 362
+          Width = 606
+          Height = 361
+          Align = alClient
+          ColumnCollection = <
+            item
+              Value = 100.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = DBGrid2
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = DBNavigator1
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 90.000000000000000000
+            end
+            item
+              Value = 10.000000000000000000
+            end>
+          TabOrder = 2
+          object DBGrid2: TDBGrid
+            AlignWithMargins = True
+            Left = 4
+            Top = 4
+            Width = 598
+            Height = 317
+            Align = alClient
+            DataSource = DataSource3
+            Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgMultiSelect, dgTitleClick, dgTitleHotTrack]
+            PopupMenu = PopupMenu1
+            TabOrder = 0
+            TitleFont.Charset = ANSI_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -16
+            TitleFont.Name = 'Segoe UI'
+            TitleFont.Style = [fsBold]
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'Secteur'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'NomEtPrenomElecteur'
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'Nom_sim'
+                Visible = True
+              end>
+          end
+          object DBNavigator1: TDBNavigator
+            AlignWithMargins = True
+            Left = 4
+            Top = 327
+            Width = 598
+            Height = 30
+            DataSource = DataSource3
+            Align = alClient
+            TabOrder = 1
+          end
+        end
+      end
+      object ComboBox2: TComboBox
+        AlignWithMargins = True
+        Left = 3
+        Top = 50
+        Width = 1217
+        Height = 29
+        Align = alTop
+        TabOrder = 2
+        TextHint = 'Filtre par Secteur'
+        OnChange = ComboBox2Change
+        Items.Strings = (
+          'Commerce uniquement'
+          'Service Uniquement '
+          'Industrie Uniquement'
+          'Commerce-Service'
+          'Commerce-Industrie'
+          'Industrie-Service')
+      end
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = DM.Q_simulation_region
+    Left = 1116
+    Top = 21
+  end
+  object DataSource2: TDataSource
+    DataSet = DM.T_historique
+    Left = 1116
+    Top = 85
+  end
+  object DataSource3: TDataSource
+    DataSet = DM.Q_import_cat
+    Left = 935
+    Top = 293
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 1064
+    Top = 402
+  end
+  object PopupMenu2: TPopupMenu
+    Left = 655
+    Top = 269
+    object Definircomme1: TMenuItem
+      Caption = 'Definir comme '
+      object Commerce1: TMenuItem
+        Caption = 'Commerce'
+        OnClick = Commerce1Click
+      end
+      object Industrie1: TMenuItem
+        Caption = 'Industrie'
+        OnClick = Industrie1Click
+      end
+      object Service1: TMenuItem
+        Caption = 'Service'
+        OnClick = Service1Click
+      end
+    end
+  end
+  object PopupMenu3: TPopupMenu
+    Left = 1208
+    Top = 490
+  end
+end
